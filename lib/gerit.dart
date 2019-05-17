@@ -29,7 +29,7 @@ class _MyAppState extends State<Gerit> {
             ],
           ),
           title: new Text('Guérites'),
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.red,
 
         ),
         body: new TabBarView(

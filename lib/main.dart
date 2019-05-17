@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:vip/profileMenu.dart';
 import 'package:vip/test.dart';
+import 'package:vip/welcome.dart';
 
 
 import './scan.dart';
@@ -24,6 +26,8 @@ void main() {
       '/scan': (BuildContext context) => new Scan(),
       '/test': (BuildContext context) => new Test(),
       '/geritImages': (BuildContext context) => new Test(),
+      '/welcome': (BuildContext context) => new welcome(),
+      '/profileMenu': (BuildContext context) => new profileMenu(),
 
       '/player': (BuildContext context) => new PlayerC(),
 
@@ -69,7 +73,10 @@ class GoRevizState extends State<GoReviz> {
                   height: 50.0,
                   color: Colors.green,
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/gerit');
+                    Navigator.push(context, new MaterialPageRoute(
+                        builder: (context) =>
+                        new welcome())
+                    );
                   },
                   child: new Text(
                     "Go Scan",

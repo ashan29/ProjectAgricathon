@@ -1,9 +1,4 @@
-import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import './main.dart';
-import 'dart:async';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class GeritInfos extends StatefulWidget {
   @override
@@ -31,7 +26,7 @@ class _MyAppState extends State<GeritInfos> {
                           image: AssetImage("assets/image/Guerites.jpg"),
                         ),
                         new Text(
-                          "Chemin des Vignes et des Guérites – Fully",
+                          "Chemin des Vignes et des Guérites",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -39,23 +34,34 @@ class _MyAppState extends State<GeritInfos> {
                           ),
                         ),
                         new Padding(padding: EdgeInsets.all(10.0)),
+
                         new Text(
-                            "Ce chemin offre un magnifique point de vue sur la plaine du Rhône",
-                            textAlign: TextAlign.center),
+                            "Bienvenue à ma Guérite ! Une guérite c’est une petite maison "
+                                "que les vignerons ont construits dans les vignes pour y "
+                                "ranger leur matériel : les caisses, les sécateurs et beaucoup "
+                                "d’autres choses. C’est ici qu’on prenait les repas et surtout "
+                                "qu’on se racontait pleins de choses… Voici une petite histoire…… “Une  "
+                                "vraie petite histoire”"
+                            ,textAlign: TextAlign.center),
+
                         new Padding(padding: EdgeInsets.all(10.0)),
-                        new Text(
-                            "Rythmé par la présence de figuiers, d’oliviers, de kakis, de plantes aromatiques et " +
-                                "d’amandiers, il relie les villages à flanc de coteau. Le sentier longe des terrasses de " +
-                                "vignes entre les remarquables murs de pierres sèches, témoins du labeur et du courage " +
-                                "des ancêtres. Grâce à son extraordinaire exposition, il est praticable quasiment toute l’année." +
-                                "Cette balade offre une vue étonnante de la plaine du Rhône et relie la châtaigneraie de Branson et " +
-                                "celle de Vers-l’Eglise. Plusieurs panneaux d’information jalonnent le chemin, ils contiennent " +
-                                "des explications sur l’évolution de la vigne au fil des saisons ainsi que sur les points singuliers " +
-                                "du vignoble de Fully. Le sentier peut être parcouru dans les deux sens et en toutes " +
-                                "saisons, vous avez la possibilité d’effectuer le retour en car postal.",
+
+                        new Text( "Les Guérites sont des petites bâtisses représentatives "
+                            "de notre région et de la viticulture. Certaines Guérites valaisannes "
+                            "existent depuis le 19e siècle et n’ont pratiquement pas changé de couleurs. "
+                            "Autrefois utilisé pour y loger durant la période des vendanges ou même pour "
+                            "la préparation des repas, celles-ci font aujourd’hui office uniquement de rangement de matériel."
+                            ,textAlign: TextAlign.center),
+                        new Padding(padding: EdgeInsets.all(10.0)),
+
+                        new Text("Les Guérites ont été comptées au nombre de … "
+                            "rien que dans le canton du Valais. Ces Guérites "
+                            "utilisées pour blabala se sont construites "
+                            "avec des matériaux blbalbla."
+                            ,textAlign: TextAlign.center),
 
 
-                            textAlign: TextAlign.center),
+
                         new Padding(padding: EdgeInsets.all(10.0)),
 
                         new Padding(padding: EdgeInsets.all(10.0)),
@@ -67,5 +73,4 @@ class _MyAppState extends State<GeritInfos> {
           ),
     );
   }
-
 }
