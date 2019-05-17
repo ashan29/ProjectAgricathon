@@ -11,6 +11,10 @@ import './geritImages.dart';
 import './test.dart';
 
 import './player.dart';
+import './wall.dart';
+import './myapp.dart';
+
+
 
 
 void main() {
@@ -30,6 +34,8 @@ void main() {
       '/profileMenu': (BuildContext context) => new profileMenu(),
 
       '/player': (BuildContext context) => new PlayerC(),
+      '/wall': (BuildContext context) => new Wall(),
+      '/myapp': (BuildContext context) => new Intro(),
 
     },
   ));
@@ -46,7 +52,6 @@ class GoRevizState extends State<GoReviz> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       appBar: new AppBar(
         title: new Text("Oenotourisme"),
         backgroundColor: Colors.cyan,
