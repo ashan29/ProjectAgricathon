@@ -118,7 +118,11 @@ class State2 extends State<BackgroundImage3> {
 
         if (barcode == "Expert1") {
 
-          Navigator.of(context).pushNamed('/gerit');
+          Navigator.push(context, new MaterialPageRoute(
+              builder: (context) =>
+              new BackgroundImage3())
+          );
+         // Navigator.of(context).pushNamed('/gerit');
 
 
 
