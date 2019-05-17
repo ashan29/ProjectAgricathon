@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import './geritInfos.dart';
 import 'geritImages.dart';
+import './myapp.dart';
 
 
 class Gerit extends StatefulWidget {
@@ -15,6 +16,9 @@ class Gerit extends StatefulWidget {
 }
 
 class _MyAppState extends State<Gerit> {
+
+  //final Color test = HexCo
+  final color = const Color(0xAD1F45);
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +29,17 @@ class _MyAppState extends State<Gerit> {
           bottom: TabBar(
             tabs: [
               Tab(text: "Info"),
-              Tab(text: "Images")
+              Tab(text: "Video Demo")
             ],
           ),
           title: new Text('Guérites'),
-          backgroundColor: Colors.cyan,
+          backgroundColor: Color.fromRGBO(173, 31, 69, 1),
 
         ),
         body: new TabBarView(
             children: [
               new GeritInfos(),
-              new GeritImages()
+              new Intro()
           ]
         )
         )
