@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vip/scan.dart';
+import 'BackgroundImage3.dart';
+import 'geritImages.dart';
 
 class BackgroundImage2 extends StatelessWidget {
   @override
@@ -6,7 +9,9 @@ class BackgroundImage2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
 
+
       body: Stack(
+
         children: <Widget>[
           Center(
             child: new Image.asset(
@@ -53,9 +58,13 @@ class BackgroundImage2 extends StatelessWidget {
 
                       icon: new Image.asset("assets/image/family.png"),
                       color: Color.fromRGBO(173, 31, 69, 1).withOpacity(0.0),
-                      onPressed: (){Navigator.of(context).pushNamed('/scan');
+                      onPressed: () {
+                        Navigator.push(context, new MaterialPageRoute(
+                            builder: (context) =>
+                            new BackgroundImage3())
+                        );
                       },
-                      label: Text("Ludic & Family",style: TextStyle(
+                      label: Text("Fun & Family",style: TextStyle(
                           color: Colors.white, fontSize: 20.0))
                   ),
                 ),

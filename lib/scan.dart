@@ -98,7 +98,7 @@ class _MyAppState extends State<Scan> {
 
         if (barcode == "Expert1") {
 
-            Navigator.of(context).pushNamed('/player');
+            Navigator.of(context).pushNamed('/gerit');
 
 
 

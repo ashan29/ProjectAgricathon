@@ -13,6 +13,7 @@ import './test.dart';
 import './player.dart';
 import './wall.dart';
 import './myapp.dart';
+import 'BackgroundImage.dart';
 
 
 
@@ -51,49 +52,17 @@ class GoReviz extends StatefulWidget {
 class GoRevizState extends State<GoReviz> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Oenotourisme"),
-        backgroundColor: Colors.cyan,
-        automaticallyImplyLeading: false,
+    return MaterialApp(
+    title: 'Flutter Demo',
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
 
-      ),
-      body: new Padding(
-        padding: const EdgeInsets.all(20),
+    primarySwatch: Colors.blue,
 
-        child: new SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: new Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              new Container(),
-              Image(
-                image: AssetImage("assets/image/VIP_Logo_1.jpg"),
-              ),
-              new Padding(padding: EdgeInsets.all(8.0)),
-              new Text("      Jouer pour réviser"),
-              new Padding(padding: EdgeInsets.all(8.0)),
-              new MaterialButton(
-                  height: 50.0,
-                  color: Colors.green,
-                  onPressed: () {
-                    Navigator.push(context, new MaterialPageRoute(
-                        builder: (context) =>
-                        new welcome())
-                    );
-                  },
-                  child: new Text(
-                    "Go Scan",
-                    style: new TextStyle(fontSize: 18, color: Colors.white),
-                  )),
+    ),
 
-              new Text(
-                  "Application réalisée dans le cours VIP du master Maltt par Kim, Marianna, Emilie et Loïc"),
-            ],
-          ),
-        ),
-      ),
+    home: BackgroundImage(),
+
     );
   }
 
