@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:vip/test.dart';
 
 
 import './scan.dart';
+import './gerit.dart';
+import './geritImages.dart';
+import './test.dart';
 
 import './player.dart';
 
@@ -16,7 +20,10 @@ void main() {
     initialRoute: '/',
     routes: <String, WidgetBuilder>{
       '/main': (context) => GoReviz(),
-      '/scans': (BuildContext context) => new Scan(),
+      '/gerit': (BuildContext context) => new Gerit(),
+      '/scan': (BuildContext context) => new Scan(),
+      '/test': (BuildContext context) => new Test(),
+      '/geritImages': (BuildContext context) => new Test(),
 
       '/player': (BuildContext context) => new PlayerC(),
 
@@ -35,6 +42,7 @@ class GoRevizState extends State<GoReviz> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+
       appBar: new AppBar(
         title: new Text("Oenotourisme"),
         backgroundColor: Colors.cyan,
@@ -61,7 +69,7 @@ class GoRevizState extends State<GoReviz> {
                   height: 50.0,
                   color: Colors.green,
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/scans');
+                    Navigator.of(context).pushNamed('/gerit');
                   },
                   child: new Text(
                     "Go Scan",
