@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vip/scan.dart';
+import 'Gerit.dart';
 import 'geritImages.dart';
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
@@ -120,7 +121,7 @@ class State2 extends State<BackgroundImage3> {
 
           Navigator.push(context, new MaterialPageRoute(
               builder: (context) =>
-              new BackgroundImage3())
+              new Gerit())
           );
          // Navigator.of(context).pushNamed('/gerit');
 
